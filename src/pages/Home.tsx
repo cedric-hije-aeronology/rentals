@@ -1,4 +1,4 @@
-import CreateRental from "../components/CreateRental";
+import RentalForm from "../components/RentalForm";
 import NavBar from "../components/NavBar";
 import RentalCard from "../components/RentalCard";
 import type { Rental } from "../models/Rental";
@@ -41,7 +41,7 @@ function Home() {
         <div className="home">
             <NavBar />
             <RentalCard rentals={rentals} />
-            <CreateRental />
+            <RentalForm />
         </div>
     )
 }
