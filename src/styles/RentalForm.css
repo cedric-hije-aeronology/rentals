@@ -1,25 +1,32 @@
+.rental-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rental-modal button {
+    background-color: #F0F0DB;
+    width: 100px;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .form-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border: solid black 1px;
-    max-width: 1200px;
     border-radius: 5px;
     margin: 0 auto;
 }
 
-.form-wrapper input {
+.form-wrapper input, textarea {
     border-radius: 5px;
     margin: 10px 0;
     padding: 5px;
-}
-
-.form-wrapper button {
-    width: 100px;
-    margin: 20px 0;
-    padding: 10px;
-    border-radius: 5px;
 }
 
 .input-wrapper {
