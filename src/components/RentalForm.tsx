@@ -6,8 +6,8 @@ function RentalForm() {
 
     return (
         <div className="rental-modal">
-            <button hidden={showForm} onClick={() => setShowForm(true)}>Post Rental</button>
-            <div className="rental-form" hidden={!showForm}>
+            {!showForm && <button onClick={() => setShowForm(true)}>Post Rental</button>}
+            {showForm && (
                 <form action="" className="form-wrapper">
                     <button type="button" onClick={() => setShowForm(false)}>Cancel</button>
 
@@ -45,7 +45,7 @@ function RentalForm() {
                     </div>
                     <button type="submit">Post Rental</button>
                 </form>
-            </div>
+            )}
         </div>
 
     )

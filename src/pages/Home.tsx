@@ -40,8 +40,8 @@ function Home() {
     return (
         <div className="home">
             <NavBar />
-            <RentalCard rentals={rentals} />
             <RentalForm />
+            <RentalCard rentals={rentals} />
         </div>
     )
 }
