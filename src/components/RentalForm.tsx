@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../styles/RentalForm.css'
 
 function RentalForm() {
     const [showForm, setShowForm] = useState<boolean>(false);

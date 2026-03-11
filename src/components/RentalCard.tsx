@@ -1,5 +1,4 @@
 import type { Rental } from "../models/Rental";
-import '../styles/RentalCard.css'
 
 interface Prop {
     rentals: Rental[]
