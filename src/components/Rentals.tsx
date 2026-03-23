@@ -2,16 +2,17 @@ import type { Rental } from "../models/Rental";
 import RentalCard from "./RentalCard";
 import RentalForm from "./RentalForm";
 import "../styles/Rentals.css"
+import { useState } from "react";
 
 function Rentals() {
-    const rentals : Rental[] = [
+    const [rentals, setRentals] = useState<Rental[]>([
         {
             house_number: "123",
             address_1: "Molave Street",
             address_2: "St Joseph Subdivision",
             barangay: "Santo Domingo",
             city: "Cainta",
-            provice: "Rizal",
+            province: "Rizal",
             monthly: 5000,
             description: "1 month advance 1 month deposit"
         },
@@ -21,7 +22,7 @@ function Rentals() {
             address_2: "St Joseph Subdivision",
             barangay: "Santo Domingo",
             city: "Cainta",
-            provice: "Rizal",
+            province: "Rizal",
             monthly: 8000,
             description: "1 month advance 1 month deposit"
         },
@@ -31,15 +32,15 @@ function Rentals() {
             address_2: "St Joseph Subdivision",
             barangay: "Santo Domingo",
             city: "Cainta",
-            provice: "Rizal",
+            province: "Rizal",
             monthly: 7500,
             description: "1 month advance 1 month deposit"
         }
-    ]
+    ])
 
     return (
         <div className="rentals">
-            <RentalForm />
+            <RentalForm setRentals={setRentals} />
             <RentalCard rentals={rentals} />
         </div>
     )

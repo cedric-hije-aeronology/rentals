@@ -5,7 +5,7 @@ export interface Rental {
     address_2: string
     barangay: string
     city: string
-    provice: string
+    province: string
     monthly: number
     description: string
 }

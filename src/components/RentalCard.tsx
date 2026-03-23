@@ -7,10 +7,10 @@ interface Prop {
 
 function RentalCard({ rentals } : Prop) {return(
         <div className="rental-card-wrapper">
-            {rentals.map(rental => (
-                <div className="rental-card">
+            {rentals.map((rental, i) => (
+                <div className="rental-card" key={i}>
                     <h4>{`${rental.monthly} /mo`}</h4>
-                    <h4>{`${rental.city}, ${rental.provice}`}</h4>
+                    <h4>{`${rental.city}, ${rental.province}`}</h4>
                     <p>{`${rental.house_number} ${rental.address_1}`}</p>
                     {rental.address_2 && <p>{rental.address_2}</p>}
                     <p>{`Barangay ${rental.barangay}`}</p>
