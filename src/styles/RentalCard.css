@@ -1,8 +1,9 @@
 .rental-card-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px;
     margin-top: 20px;
+    width: 100%;
 }
 
 .rental-card {
@@ -10,7 +11,5 @@
     margin: 10px;
     border: solid 1px white;
     border-radius: 5px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
+    overflow-wrap: break-word;
 }
