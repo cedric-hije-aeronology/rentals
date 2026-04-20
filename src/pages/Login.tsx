@@ -1,7 +1,7 @@
 import { useState, type SubmitEvent } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { useLocation, useNavigate } from "react-router";
-
+import "../styles/Login.css"
 
 
 function Login() {
@@ -13,7 +13,7 @@ function Login() {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const from = location.state?.from?.pathname || "/";
+    const from = location.state?.from || "/";
     
     const handleSubmit = async (e : SubmitEvent) => {
         e.preventDefault();
@@ -43,11 +43,13 @@ function Login() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input type="text" onChange={(e) => setUsername(e.target.value)} placeholder="Username" />
-            <input type="text" onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
-            <button type="submit">Login</button>
-        </form>
+        <div className="login-container">
+            <form onSubmit={handleSubmit} className="login-form">
+                <input type="text" onChange={(e) => setUsername(e.target.value)} placeholder="Username" />
+                <input type="text" onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+                <button type="submit">Login</button>
+            </form>
+        </div>
   );
 }
 
